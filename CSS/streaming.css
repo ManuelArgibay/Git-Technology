@@ -1,0 +1,367 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#contenedor{
+    border: 3px solid black;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 15vh 90vh 200vh 30vh;
+    grid-template-areas: 
+    "header"
+    "inicio"
+    "productos"
+    "footer";
+}
+
+
+/* Comienzo Header */
+
+.header{
+    display: flex;
+    grid-area: "header";
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: white;
+    padding-right: 10%;
+    z-index: 50;
+}
+
+.logo{
+    height: 14vh;
+    padding-left: 2vh;
+}
+
+.header li{
+    display: inline-block;
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0vh 4vh;
+    font-family: Oswald, sans-serif;
+    color: black;
+}
+
+.header ul :hover{
+    font-size: 24px;
+    text-decoration: underline;
+    transition: all 2s;
+}
+
+/* Fin Header */
+
+
+/* Comienzo Inicio Hardware */
+
+.inicio_hardware{
+    grid-area: "inicio";
+    height: 90vh;
+    background-image: url(./Imagenes/Fondo\ Streaming.jpg);
+    background-size: cover;
+}
+
+.inicio_hardware h1{
+    width: 700px;
+    position: absolute;
+    top: 28%;
+    left: 3%;
+    font-size: 70px;
+    font-family: 'Russo One', sans-serif;
+    text-align: center;
+    z-index: 20;
+    text-shadow: 3px 5px 5px rgb(0, 0, 0);
+    color: rgb(212, 0, 255);
+}
+
+/* Fin Inicio Hardware */
+
+
+/* Comienzo Productos */
+
+#productos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    grid-area: "productos";
+    height: 100%;
+    background-image: url(./Imagenes/Fondo\ Hardware\ Productos.svg);
+    background-size: cover;
+}
+
+#productos h2{
+    text-align: center;
+    font-family: Oswald, sans-serif;
+    font-size: 40px;
+    color: white;
+}
+
+.productos{
+    display: flex;
+    height: 90%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.producto{
+    height: 250px;
+    width: 250px;
+    text-align: center;
+    background-color: brown;
+    color: white;
+}
+
+/* Fin Productos */
+
+
+/* Comienzo Footer */
+
+.footer{
+    display: flex;
+    grid-area: "footer";
+    background-color: rgb(0, 89, 255);
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 20px;
+}
+
+.footer1{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer1 h3{
+    font-size: 3vh;
+    text-decoration: underline;
+    font-family: Oswald, sans-serif;
+    color: white;
+}
+
+.footer1 h5{
+    font-size: 2vh;
+    margin: 1vh 0vh;
+    font-family: Oswald, sans-serif;
+    color: white;
+}
+
+.footer1 a :hover{
+    text-decoration: underline;
+}
+
+.redes{
+    display: flex;
+    flex-direction: row;
+}
+
+.redes img{
+    height: 5vh;
+    margin: 4vh 1vh;
+}
+
+.redes a :hover{
+    transform: scale(1.10);
+    transition: all 1s;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 60px
+}
+/* Fin Footer */
+
+
+
+
+/* Inicio Media Queries - Tablet */
+
+@media only screen and (max-width: 1024px){
+    #contenedor{
+        grid-template-columns: 100%;
+        grid-template-rows: 70px 300px 2000px 200px;
+        overflow: hidden;
+    }
+
+    .logo{
+        height: 68px;
+    }
+
+    .header ul{
+        text-align: center;
+    }
+
+    .header li{
+        font-size: 10px;
+        padding-right: 10px;
+    }
+
+    .header ul :hover{
+        font-size: 15px;
+        text-decoration: underline;
+        transition: all 2s;
+    }
+
+    .inicio_hardware{
+        height: 100%;
+    }
+
+    .inicio_hardware h1{
+        width: 400px;
+        font-size: 40px;
+        position: absolute;
+        top: 20%;
+        left: 5%;
+    }
+
+    #productos{
+        justify-content: flex-start;
+    }
+
+    #productos h2{
+        font-size: 30px;
+        padding: 10px 0px;
+    }
+
+    .productos{
+        height: 100%;
+        padding: 30px;
+    }
+
+    .producto{
+        height: 150px;
+        width: 150px;
+        padding: 30px;
+    }
+
+    .footer{
+        justify-content: space-evenly;
+        align-items: baseline;
+    }
+
+    .footer1 h3{
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+
+    .footer1 h5{
+        font-size: 10px;
+        margin: 5px 0px;
+    }
+
+    form{
+        margin: 0px;
+        padding: 0px;
+
+    }
+
+}
+
+/* Inicio Media Queries - Tablet */
+
+
+/* Inicio Media Queries - Mobile S */
+
+@media only screen and (max-width: 767px ) {
+    #contenedor{
+        grid-template-columns: 100%;
+        grid-template-rows: 45px 200px 3200px 100px;
+        overflow: hidden;
+    }
+
+    .header{
+        padding-right: 25px;
+    }
+
+    .logo{
+        height: 40px;
+    }
+
+    .header ul{
+        text-align: center;
+    }
+
+    .header li{
+        font-size: 7px;
+        padding: 0px 5px;
+    }
+
+    .header ul :hover{
+        font-size: 8px;
+        text-decoration: underline;
+        transition: all 2s;
+    }
+
+    .inicio_hardware{
+        height: 100%;
+    }
+
+    .inicio_hardware h1{
+        width: 180px;
+        font-size: 18px;
+        position: absolute;
+        top: 14%;
+        left: 3%;
+    }
+
+    #productos{
+        justify-content: flex-start;
+    }
+
+    #productos h2{
+        font-size: 20px;
+        padding: 20px 0px;
+    }
+
+    .productos{
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .producto{
+        height: 150px;
+        width: 150px;
+        padding: 20px;
+    }
+
+    .footer{
+        width: 100%;
+        height: 60px;
+        justify-content: space-evenly;
+        align-items: baseline;
+    }
+
+    .footer1 h3{
+        font-size: 5px;
+        padding-bottom: 5px;
+    }
+
+    .footer1 h5{
+        font-size: 2px;
+        margin: 5px 0px;
+    }
+
+    form{
+        margin: 0px;
+        padding: 0px;
+        background-color: brown;
+    }
+
+    .redes{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .redes img{
+        height: 5px;
+    }
+}
+
+/* Fin Media Queries - Mobile S */
