@@ -8,10 +8,9 @@ html{
 }
 
 #contenedor{
-    border: 3px solid black;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 15vh 90vh 200vh 30vh;
+    grid-template-rows: 15vh 78vh 200vh 30vh;
     grid-template-areas: 
     "header"
     "inicio"
@@ -62,31 +61,23 @@ html{
 
 /* Comienzo Inicio Hardware */
 
-.inicio_hardware{
+.inicio_componentes{
     grid-area: "inicio";
-    height: 90vh;
-    background-image: url(./Imagenes/Fondo\ Componentes.jpg);
-    background-size: cover;
-    background-position: center;
+
 }
 
-.inicio_hardware h1{
+
+.inicio_componentes h1{
     width: 700px;
     position: absolute;
-    top: 28%;
-    left: 3%;
+    top: 40%;
+    left: 10%;
     font-size: 70px;
     font-family: 'Russo One', sans-serif;
     text-align: center;
     z-index: 20;
     text-shadow: 3px 5px 5px rgb(0, 0, 0);
     color: rgb(208, 255, 0);
-}
-
-.inicio_hardware h1 span{
-    font-size: 110px;
-    color: rgb(255, 0, 0);
-    text-shadow: 5px 5px 2px rgb(0, 0, 0);;
 }
 
 /* Fin Inicio Hardware */

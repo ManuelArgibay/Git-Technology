@@ -8,10 +8,9 @@ html{
 }
 
 #contenedor{
-    border: 3px solid black;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 15vh 90vh 200vh 30vh;
+    grid-template-rows: 15vh 78vh 200vh 30vh;
     grid-template-areas: 
     "header"
     "inicio"
@@ -64,17 +63,15 @@ html{
 
 .inicio_hardware{
     grid-area: "inicio";
-    height: 90vh;
-    background-image: url(./Imagenes/Fondo\ Streaming.jpg);
-    background-size: cover;
+    overflow: hidden;
 }
 
 .inicio_hardware h1{
     width: 700px;
     position: absolute;
-    top: 28%;
-    left: 3%;
-    font-size: 70px;
+    top: 30%;
+    left: 8%;
+    font-size: 65px;
     font-family: 'Russo One', sans-serif;
     text-align: center;
     z-index: 20;
