@@ -10,7 +10,7 @@ html{
 #contenedor{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 15vh 60vh 60vh 110vh 30vh;
+    grid-template-rows: 15vh 55vh 60vh 110vh 30vh;
     grid-template-areas: 
     "header"
     "inicio"
@@ -70,14 +70,6 @@ html{
     background-image: url(./Imagenes/Fondo\ Index.png);
     background-size: cover;
     background-position: center;
-}
-
-.inicio h2{
-    font-family: Russo One, sans-serif;
-    padding: 30px;
-    font-size: 50px;
-    text-shadow: 2px 2px 10px rgb(59, 59, 59);
-
 }
 
 /* Fin Inicio */

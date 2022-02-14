@@ -11,7 +11,7 @@ html{
     border: 3px solid black;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 15vh 90vh 200vh 30vh;
+    grid-template-rows: 15vh 78vh 200vh 30vh;
     grid-template-areas: 
     "header"
     "inicio"
@@ -64,18 +64,14 @@ html{
 
 .inicio_hardware{
     grid-area: "inicio";
-    height: 90vh;
-    background-image: url(./Imagenes/Fondo\ Hardware.jpg);
-    background-size: cover;
-    background-position: center;
 }
 
 .inicio_hardware h1{
-    width: 700px;
+    width: 600px;
     position: absolute;
-    top: 28%;
-    left: 3%;
-    font-size: 70px;
+    top: 30%;
+    left: 10%;
+    font-size: 60px;
     font-family: 'Russo One', sans-serif;
     text-align: center;
     z-index: 20;
@@ -84,7 +80,7 @@ html{
 }
 
 .inicio_hardware h1 span{
-    font-size: 110px;
+    font-size: 90px;
     color: rgb(255, 0, 0);
     text-shadow: 5px 5px 2px rgb(0, 0, 0);;
 }
