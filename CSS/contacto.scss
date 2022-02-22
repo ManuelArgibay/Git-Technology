@@ -1,21 +1,25 @@
-* {
+*{
     margin: 0;
     padding: 0;
 }
 
-html {
+html{
     scroll-behavior: smooth;
 }
 
-#contenedor {
+#contenedor{
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 15vh 115vh 30vh;
-    grid-template-areas: "header" "contacto" "footer";
+    grid-template-areas: 
+    "header"
+    "contacto"
+    "footer";
 }
 
 /* Comienzo Header */
-.header {
+
+.header{
     display: flex;
     grid-area: "header";
     position: sticky;
@@ -23,27 +27,27 @@ html {
     left: 0px;
     justify-content: space-between;
     align-items: center;
-    border: 2px solid white;
+    border: 2px solid rgb(255, 255, 255);
     background-color: white;
     padding-right: 10%;
     z-index: 50;
-}
-.header li {
-    display: inline-block;
-    list-style: none;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 0vh 4vh;
-    font-family: Oswald, sans-serif;
-    color: black;
-}
-.header ul :hover {
-    font-size: 24px;
-    text-decoration: underline;
-    transition: all 2s;
+    & li{
+        display: inline-block;
+        list-style: none;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 0vh 4vh;
+        font-family: Oswald, sans-serif;
+        color: black;
+    }
+    & ul :hover{
+        font-size: 24px;
+        text-decoration: underline;
+        transition: all 2s;
+    }
 }
 
-.logo {
+.logo{
     height: 14vh;
     padding-left: 2vh;
 }
@@ -51,7 +55,8 @@ html {
 /* Fin Header */
 
 /* Comienzo Contacto */
-.contacto {
+
+.contacto{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,30 +68,30 @@ html {
     background-size: cover;
 }
 
-.formulario {
+.formulario{
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
     height: 650px;
     width: 500px;
-    border: solid 5px white;
+    border: solid 5px rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-form label {
+form label{
     font-family: Oswald, sans-serif;
     color: white;
 }
 
-.sexo1 {
+.sexo1{
     display: flex;
     flex-direction: column;
     font-family: Oswald, sans-serif;
     color: white;
 }
 
-.sexo2 {
+.sexo2{
     width: 400px;
     display: flex;
     flex-direction: row;
@@ -96,7 +101,7 @@ form label {
     color: white;
 }
 
-.intereses {
+.intereses{
     display: flex;
     flex-direction: row;
     width: 200px;
@@ -105,7 +110,7 @@ form label {
     color: white;
 }
 
-.terminos {
+.terminos{
     display: flex;
     flex-direction: row;
     width: 300px;
@@ -114,144 +119,146 @@ form label {
     color: white;
 }
 
-.botones {
+.botones{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     font-family: Oswald, sans-serif;
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
 /* Fin Contacto */
 
 /* Comienzo Footer */
-.footer {
+
+.footer{
     display: flex;
     grid-area: "footer";
-    background-color: #0059ff;
+    background-color: rgb(0, 89, 255);
     justify-content: space-between;
     align-items: baseline;
     padding: 20px;
 }
 
-.footer1 {
+.footer1{
     display: flex;
     flex-direction: column;
-}
-.footer1 h3 {
+    & h3{
     font-size: 3vh;
     text-decoration: underline;
     font-family: Oswald, sans-serif;
     color: white;
-}
-.footer1 h5 {
-    font-size: 2vh;
-    margin: 1vh 0vh;
-    font-family: Oswald, sans-serif;
-    color: white;
-}
-.footer1 a :hover {
-    text-decoration: underline;
+    }
+    & h5{
+        font-size: 2vh;
+        margin: 1vh 0vh;
+        font-family: Oswald, sans-serif;
+        color: white;
+    }
+    & a :hover{
+        text-decoration: underline;
+    }
 }
 
-.redes {
+.redes{
     display: flex;
     flex-direction: row;
+    & img{
+        height: 5vh;
+        margin: 4vh 1vh;
+    }
+    & a :hover{
+        transform: scale(1.10);
+        transition: all 1s;
+        border: 3px solid rgb(0, 0, 0);
+        border-radius: 60px
+    }
 }
-.redes img {
-    height: 5vh;
-    margin: 4vh 1vh;
-}
-.redes a :hover {
-    transform: scale(1.1);
-    transition: all 1s;
-    border: 3px solid black;
-    border-radius: 60px;
-}
+
 
 /* Fin Footer */
-/* Inicio Media Queries - Tablet */
-@media only screen and (min-width: 768px) and (max-width: 1024px){
-    
-    #contenedor {
-        grid-template-columns: 100%;
-        grid-template-rows: 70px 700px 100px;
-        overflow: hidden;
-    }
 
-    .logo {
-    height: 68px;
-    }
 
-    .header ul {
-    text-align: center;
-    }
 
-    .header li {
-    font-size: 10px;
-    padding-right: 10px;
-    }
 
-    .header ul :hover {
-    font-size: 15px;
-    text-decoration: underline;
-    transition: all 2s;
-    }
-}
 /* Inicio Media Queries - Tablet */
 
-/* Inicio Media Queries - Mobile S */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1024px){
 
-    #contenedor {
-        grid-template-columns: 100%;
-        grid-template-rows: 45px 800px 100px;
-        overflow: hidden;
+    .logo{
+        height: 68px;
     }
 
-    .header {
-        padding-right: 25px;
-    }
-
-    .logo {
-        height: 40px;
-    }
-
-    .header ul {
+    .header ul{
         text-align: center;
     }
 
-    .header li {
+    .header li{
+        font-size: 10px;
+        padding-right: 10px;
+    }
+
+    .header ul :hover{
+        font-size: 15px;
+        text-decoration: underline;
+        transition: all 2s;
+    }
+}
+/* Inicio Media Queries - Tablet */
+
+
+/* Inicio Media Queries - Mobile S */
+
+@media only screen and (max-width: 767px ) {
+    
+    #contenedor{
+        grid-template-columns: 100%;
+        grid-template-rows: 45px 700px 100px;
+        overflow: hidden;
+    }
+
+    .header{
+        padding-right: 25px;
+    }
+
+    .logo{
+        height: 40px;
+    }
+
+    .header ul{
+        text-align: center;
+    }
+
+    .header li{
         font-size: 7px;
         padding: 0px 5px;
     }
 
-    .header ul :hover {
+    .header ul :hover{
         font-size: 8px;
         text-decoration: underline;
         transition: all 2s;
     }
 
-    .formulario {
+    .formulario{
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        justify-content: center;
-        padding: 10px;
+        justify-content: space-evenly;
         height: 80%;
         width: 100%;
         font-size: 15px;
         border: none;
     }
 
-    .sexo2 {
+    .sexo2{
         display: flex;
         flex-direction: column;
     }
 
     .footer{
         width: 100%;
-        height: 100px;
+        height: 60px;
         justify-content: space-evenly;
         align-items: baseline;
     }
@@ -266,21 +273,20 @@ form label {
         margin: 5px 0px;
     }
 
-    form{
+    .footer1 form{
         margin: 0px;
         padding: 0px;
     }
 
     .redes{
         position: absolute;
-        top: 860px;
-        right: 40px;
+        top: 10px;
+        right: 10px;
     }
 
     .redes img{
-        height: 8px;
+        height: 5px;
     }
 }
-/* Fin Media Queries - Mobile S */
 
-/*# sourceMappingURL=contacto.css.map */
+/* Fin Media Queries - Mobile S */

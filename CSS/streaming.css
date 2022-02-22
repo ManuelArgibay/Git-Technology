@@ -10,7 +10,7 @@ html{
 #contenedor{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 15vh 78vh 200vh 30vh;
+    grid-template-rows: 15vh 75vh 200vh 30vh;
     grid-template-areas: 
     "header"
     "inicio"
@@ -61,12 +61,12 @@ html{
 
 /* Comienzo Inicio Hardware */
 
-.inicio_hardware{
+.inicio_streaming{
     grid-area: "inicio";
     overflow: hidden;
 }
 
-.inicio_hardware h1{
+.inicio_streaming h1{
     width: 700px;
     position: absolute;
     top: 30%;
@@ -178,10 +178,10 @@ html{
 
 /* Inicio Media Queries - Tablet */
 
-@media only screen and (max-width: 1024px){
+@media only screen and (min-width: 768px) and (max-width: 1024px){
     #contenedor{
         grid-template-columns: 100%;
-        grid-template-rows: 70px 300px 2000px 200px;
+        grid-template-rows: 70px 280px 1000px 200px;
         overflow: hidden;
     }
 
@@ -204,16 +204,16 @@ html{
         transition: all 2s;
     }
 
-    .inicio_hardware{
+    .inicio_streaming{
         height: 100%;
     }
 
-    .inicio_hardware h1{
-        width: 400px;
-        font-size: 40px;
+    .inicio_streaming h1{
+        width: 300px;
+        font-size: 30px;
         position: absolute;
         top: 20%;
-        left: 5%;
+        left: 15%;
     }
 
     #productos{
@@ -222,7 +222,7 @@ html{
 
     #productos h2{
         font-size: 30px;
-        padding: 10px 0px;
+        padding: 100px 0px 0px 0px;
     }
 
     .productos{
@@ -267,7 +267,7 @@ html{
 @media only screen and (max-width: 767px ) {
     #contenedor{
         grid-template-columns: 100%;
-        grid-template-rows: 45px 200px 3200px 100px;
+        grid-template-rows: 45px 115px 3200px 100px;
         overflow: hidden;
     }
 
@@ -294,16 +294,16 @@ html{
         transition: all 2s;
     }
 
-    .inicio_hardware{
+    .inicio_streaming{
         height: 100%;
     }
 
-    .inicio_hardware h1{
-        width: 180px;
-        font-size: 18px;
+    .inicio_streaming h1{
+        width: 170px;
+        font-size: 12px;
         position: absolute;
-        top: 14%;
-        left: 3%;
+        top: 10%;
+        left: 14%;
     }
 
     #productos{
@@ -312,7 +312,7 @@ html{
 
     #productos h2{
         font-size: 20px;
-        padding: 20px 0px;
+        padding: 20px 0px 0px 0px;
     }
 
     .productos{
@@ -329,7 +329,7 @@ html{
 
     .footer{
         width: 100%;
-        height: 60px;
+        height: 100px;
         justify-content: space-evenly;
         align-items: baseline;
     }
@@ -347,17 +347,16 @@ html{
     form{
         margin: 0px;
         padding: 0px;
-        background-color: brown;
     }
 
     .redes{
         position: absolute;
-        top: 10px;
-        right: 10px;
+        top: 3375px;
+        right: 40px;
     }
 
     .redes img{
-        height: 5px;
+        height: 8px;
     }
 }
 
